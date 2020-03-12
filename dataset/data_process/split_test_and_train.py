@@ -1,52 +1,59 @@
-import pickle
 import random
-import numpy as np
-score=pickle.load(open('./drive/My Drive/data/Score.ds','rb'))
-group=pickle.load(open('./drive/My Drive/data/Group.ds','rb'))
-article=pickle.load(open('./drive/My Drive/data/Article.ds','rb'))
+"""
+import re
+UNKNOWN_TOKEN = "UNK"
 
-score=score.tolist()
-group=group.tolist()
-article=article.tolist()
-test_score=[]
-test_group=[]
-test_article=[]
-test_address=[]
-train_address=[]
-train_score=[]
-train_article=[]
-train_score_address=[]
-test_score_address=[]
-for i in range(8):
-    train_score.append([])
-    test_score.append([])
-    test_group.append([])
-    test_article.append([])
-    test_address.append('./drive/My Drive/data/group_test_and_train/test_'+str(i+1)+'_article.ds')
-    train_address.append('./drive/My Drive/data/group_test_and_train/train_'+str(i+1)+'_article.ds')
-    train_score_address.append('./drive/My Drive/data/group_test_and_train/train_'+str(i+1)+'_score.ds')
-    test_score_address.append('./drive/My Drive/data/group_test_and_train/test_'+str(i+1)+'_score.ds')
-for num,(sco,gro,arti) in enumerate(zip(score,group,article)):
-    if(num%5==0):
-        test_score[gro-1].append(sco)
-        #test_group[].append(gro)
-        test_article[gro-1].append(arti)
-        score.remove(sco)
-        group.remove(gro)
-        article.remove(arti)
-    else:
-        train_score[gro-1].append(sco)
-        train_article[gro-1].append(arti)
-        score.remove(sco)
-        group.remove(gro)
-        article.remove(arti)
-for i in range (8):
-    with open(train_address[i]) as f:
-        pickle.dump(train_article[i],f)
-    with open(train_score_address[i]) as f:
-        pickle.dump(train_score[i],f)
-    with open(test_address[i]) as f:
-        pickle.dump(test_article[i],f)
-    with open(test_score_address[i]) as f:
-        pickle.dump(test_score[i],f)
+DROPOUT_TOKENS = {"a", "an", "the", "'ll", "'s", "'m", "'ve"}  # Add "to"
+SHORT_TOKENS={"ll", "s", "m", "ve"}
+REPLACEMENTS = {"there": "their", "their": "there", "then": "than",
+                "than": "then"}
+dropout_prob=0.25
+replacement_prob=0.25
+
+# Add: "be":"to"
+with open("../../dataset/translate-dataset/train_set.txt",'w') as out_f:
+    with open("../../dataset/translate-dataset/movie_dialog_train.txt",'r') as f:
+        for each_line in f.readlines():
+            each_line=each_line.lower().strip().split()
+            source = []
+            target = []
+
+            for token in each_line:
+                target.append(token)
+
+              # Randomly dropout some words from the input.
+                dropout_token = (token in DROPOUT_TOKENS and
+                             random.random() < dropout_prob)
+                replace_token = (token in REPLACEMENTS and
+                             random.random() < replacement_prob)
+
+                if replace_token:
+                    source.append(REPLACEMENTS[token])
+                elif not dropout_token:
+                    source.append(token)
+            st=""
+            for e in source:
+                if(st==""):
+                    st=e
+                else:
+                    st=st+" "+e
+            out_f.writelines(st)
+            out_f.writelines('\n')
+
+"""
+val_set=open("../../dataset/translate-dataset/val_set.txt",'w')
+train_set=open("../../dataset/translate-dataset/training_set.txt",'w')
+
+with open("../../dataset/translate-dataset/train_set.txt",'r') as out_f:
+    with open("../../dataset/translate-dataset/movie_dialog_train.txt",'r') as f:
+        source=out_f.readlines()
+        target=f.readlines()
+        for sou,tar in zip(source,target):
+            if(random.random()<0.1):
+                val_set.writelines("src:"+sou)
+                val_set.writelines("tar:"+tar)
+            else:
+                train_set.writelines("src:" + sou )
+                train_set.writelines("tar:" + tar)
+
 

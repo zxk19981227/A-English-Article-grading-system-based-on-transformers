@@ -6,10 +6,10 @@ import os
 import time
 import numpy as np
 import matplotlib.pyplot as plt
-"""try:
+try:
   !pip install tf-nightly
 except Exception:
-  pass"""
+  pass
 dataset=[]
 #print(tf.__version__)
 file='../../dataset/translate-dataset/'
@@ -22,7 +22,11 @@ val_dataset=[]
 val_target=[]
 test_dataset=[]
 test_target=[]
-
+current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+train_log_dir = 'logs/gradient_tape/' + current_time + '/train'
+test_log_dir = 'logs/gradient_tape/' + current_time + '/test'
+train_summary_writer = tf.summary.create_file_writer(train_log_dir)
+test_summary_writer = tf.summary.create_file_writer(test_log_dir)
 with open(file+'train_train.txt') as f:
     for each in f.readlines():
         if each[:4]== 'src:':
@@ -731,6 +735,8 @@ def train_step(inp, tar):
 
     train_loss(loss)
     train_accuracy(tar_real, predictions)
+    tf.summary.scalar('loss', train_loss.result(), step=epoch)
+    tf.summary.scalar('accuracy', train_accuracy.result(), step=epoch)
 
 
 """葡萄牙语作为输入语言，英语为目标语言。"""

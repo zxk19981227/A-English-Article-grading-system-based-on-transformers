@@ -1,0 +1,149 @@
+<template>
+    <div>
+        <div>
+            <div style="display: flex;justify-content: space-between">
+
+                <div>
+                    <el-button type="primary" icon="el-icon-plus" @click="showAddEmpView">
+                        添加地图
+                    </el-button>
+                    <el-button type="primary" icon="el-icon-plus" @click="deletemap">
+                        删除地图
+                    </el-button>
+                </div>
+            </div>
+            <el-table :data="maps" border stripe size="mini">
+                <el-table-column type="selection" align="left" width="55"></el-table-column>
+                <el-table-column prop="id" label="编号" fixed width="120" align="left"></el-table-column>
+                <el-table-column prop="map_name" label="名称" width="120" align="left"></el-table-column>
+                <el-table-column prop="view" label="预览" width="200" align="left">
+                <template slot-scope="scope">
+                <el-button @click="init(scope.row)" style="padding: 3px" size="mini">查看地图</el-button>
+                </template>
+                </el-table-column>
+                <el-table-column prop="detail" label="详情" width="120" align="left"></el-table-column>
+                <el-table-column prop="longitude" label="地图经度" width="120" align="left"></el-table-column>
+                <el-table-column prop="altitude" label="地图维度" width="120" align="left"></el-table-column>
+                <el-table-column label="操作" align="center">
+                    <template slot-scope="scope">
+                        <el-popover
+                                placement="left"
+                                title="修改地图属性"
+                                @show="showPop(scope.row.salary)"
+                                @hide="hidePop(scope.row)"
+                                width="200"
+                                trigger="click">
+                            <div>
+                                <el-select v-model="currentSalary" placeholder="请选择" size="mini">
+                                    <el-option
+                                            v-for="item in salaries"
+                                            :key="item.id"
+                                            :label="item.name"
+                                            :value="item.id">
+                                    </el-option>
+                                </el-select>
+                            </div>
+                            <el-button slot="reference" type="danger">修改地图</el-button>
+                        </el-popover>
+                    </template>
+                </el-table-column>
+            </el-table>
+            <div style="display: flex;justify-content: flex-end">
+                <el-pagination
+                        background
+                        @size-change="sizeChange"
+                        @current-change="currentChange"
+                        layout="sizes, prev, pager, next, jumper, ->, total, slot"
+                        :total="total">
+                </el-pagination>
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "Map",
+        data() {
+            return {
+                Maps: [],
+                total: 0,
+                currentPage: 1,
+                currentSize: 10,
+                currentSalary: null,
+            }
+        },
+        mounted() {
+            this.initEmps();
+            this.map = this.$utils.map.createMap("map-container");
+        },
+        methods: {
+         showAddEmpView() {
+                this.emptyEmp();
+                this.title = '添加地图';
+                this.getMaxWordID();
+                this.dialogVisible = true;
+            },
+         init (data) {
+              let map = new AMap.Map('container', {
+                  resizeEnable: true,
+                  rotateEnable:true,
+                  pitchEnable:true,
+                  zoom: 17,
+                  pitch:80,
+                  rotation:-15,
+                  viewMode:'3D',//开启3D视图,默认为关闭
+                  buildingAnimation:true,//楼块出现是否带动画
+
+                  expandZoomRange:true,
+                  zooms:[3,20],
+                  center:[data.longitude,data.altitude]
+              })
+            },
+            sizeChange(size) {
+                this.currentSize = size;
+                this.initEmps();
+            },
+
+            currentChange(page) {
+                this.currentPage = page;
+                this.initEmps();
+            },
+            hidePop(data) {
+                if (this.currentSalary) {
+                    this.putRequest('/salary/sobcfg/?eid=' + data.id + '&sid=' + this.currentSalary).then(resp => {
+                        if (resp) {
+                            this.initEmps()
+                        }
+                    });
+                }
+            },
+            showPop(data) {
+                if (data) {
+                    this.currentSalary = data.id;
+                } else {
+                    this.currentSalary = null;
+                }
+            },
+
+            initEmps() {
+                this.getRequest("/map/?page=" + this.currentPage + '&size=' + this.currentSize).then(resp => {
+                    if (resp) {
+                        this.maps = resp.data;
+                        this.total = resp.total;
+                    }
+                })
+            }
+        }
+    }
+</script>
+<style scoped>
+.map-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+}
+</style>

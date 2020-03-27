@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.MapMapper" >
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Map" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="map_name" property="map_name" jdbcType="VARCHAR"/>
+        <result column="altitude" property="altitude" jdbcType="DOUBLE"/>
+        <result column="longitude" property="longitude" jdbcType="DOUBLE"/>
+        <result column="detail" property="detail" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List" >
+    id,map_name,l,a,detail
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from map
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="maxWorkID" resultType="java.lang.Integer" >
+            select max(id) from employee
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from map
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insertMap"  >
+    insert into map ( map_name,l,a,info)
+        values
+
+            (#{map_name,jdbcType=VARCHAR},#{longitude,jdbcType=DOUBLE},#{altitude,jdbcType=DOUBLE},#{detail,jdbcType=VARCHAR})
+
+
+  </insert>
+    <select id="getMapByPage" resultMap="BaseResultMap">
+        select id,map_name,l as longitude , a as altitude, info as detail from map
+        <if test="page !=null and size!=null">
+            limit #{page},#{size}
+        </if>
+    </select>
+    <select id="getTotal" resultType="java.lang.Long">
+        select count(*) from map
+    </select>
+    <insert id="insertByPrimaryKey" parameterType="org.javaboy.vhr.model.Map" >
+        insert into map
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="map_name != null" >
+                name,
+            </if>
+            <if test="long != null" >
+                long,
+            </if>
+            <if test="a!=null">
+                a
+            </if>
+            <if test="info!=null">
+                info
+            </if>
+        </trim>
+
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Map" >
+        update Map
+        <set >
+            <if test="map_name!= null" >
+                map_name = #{map_name,jdbcType=VARCHAR},
+            </if>
+            <if test="long != null" >
+                long = #{long,jdbcType=DOUBLE},
+            </if>
+            <if test="a!=null">
+                a=#{a,jdbcType=DOUBLE},
+            </if>
+            <if test="info!=null">
+                info=#{info,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Map" >
+    update map
+    set map_name = #{map_name,jdbcType=VARCHAR},
+        l = #{longitude,jdbcType=DOUBLE},
+        a=#{altitude,jdbcType=DOUBLE},
+        info=#{detail,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

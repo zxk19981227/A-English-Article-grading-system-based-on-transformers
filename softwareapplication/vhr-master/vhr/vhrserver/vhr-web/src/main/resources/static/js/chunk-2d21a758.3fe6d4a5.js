@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d21a758"],{bc34:function(n,e,o){var u={"./Stucomp.vue":"96d2","./Stumind.vue":"0b29","./Stuproc.vue":"3f1d","./Stuvideo.vue":"93be"};function r(n){var e=t(n);return o(e)}function t(n){if(!o.o(u,n)){var e=new Error("Cannot find module '"+n+"'");throw e.code="MODULE_NOT_FOUND",e}return u[n]}r.keys=function(){return Object.keys(u)},r.resolve=t,n.exports=r,r.id="bc34"}}]);
-//# sourceMappingURL=chunk-2d21a758.3fe6d4a5.js.map

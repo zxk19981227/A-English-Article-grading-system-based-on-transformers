@@ -61,23 +61,10 @@ else:
     (en.numpy() for en,pt in train_dataset), target_vocab_size=2**13)
     tokenizer_en.save_to_file(source_token)
 tokenizer_pt=tokenizer_en
-"""if os.path.exists(target_token):
-    tokenizer_pt=tfds.features.text.SubwordTextEncoder.load_from_file(target_token)
-else:
-    tokenizer_pt = tfds.features.text.SubwordTextEncoder.build_from_corpus(
-    (pt.numpy() for en,pt in train_dataset), target_vocab_size=2 ** 13)
-    tokenizer_pt.save_to_file(target_token)
-"""
-
-
-"""如果单词不在词典中，则分词器（tokenizer）通过将单词分解为子词来对字符串进行编码。"""
-
-
 BUFFER_SIZE = 20000
 BATCH_SIZE = 256
 
 """将开始和结束标记（token）添加到输入和目标。"""
-
 def encode(lang1, lang2):
     lang1 = [tokenizer_pt.vocab_size] + tokenizer_pt.encode(
         lang1.numpy()) + [tokenizer_pt.vocab_size + 1]
@@ -683,7 +670,7 @@ if ckpt_manager.latest_checkpoint:
     ckpt.restore(ckpt_manager.latest_checkpoint)
     print('Latest checkpoint restored!!')
 
-"""目标（target）被分成了 tar_inp 和 tar_real。tar_inp 作为输入传递到解码器。`tar_real` 是位移了 1 的同一个输入：在 `tar_inp` 中的每个位置，`tar_real` 包含了应该被预测到的下一个标记（token）。
+"""目标（target）被分成了 tar_inp 和 tar_real。tar_inp 作为输入传/corpus/递到解码器。`tar_real` 是位移了 1 的同一个输入：在 `tar_inp` 中的每个位置，`tar_real` 包含了应该被预测到的下一个标记（token）。
 
 例如，`sentence` = "SOS A lion in the jungle is sleeping EOS"
 

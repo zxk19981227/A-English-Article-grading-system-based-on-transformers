@@ -30,20 +30,24 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Combined Application" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YvTlCvAHWnZhUB3iaVUrCAEL5l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../graduate_design_final_version" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\prog\python\github\postgraduate\Combined Application\models\Grade\Doc2vec" />
       <recent name="D:\prog\python\github\postgraduate\Combined Application\models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\prog\python\github\postgraduate\Combined Application\models\Grade\Doc2vec" />
+      <recent name="D:\prog\python\github\postgraduate\Combined Application\models\Grade" />
+      <recent name="D:\prog\python\github\postgraduate\Combined Application\models" />
       <recent name="D:\prog\python\github\postgraduate\source\Correct_text" />
     </key>
   </component>
@@ -59,8 +63,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
-    <configuration name="Create Train Dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="Run_Correct" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="postgraduate" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -68,12 +72,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source/Correct_text" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Combined Application/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/Correct_text/Create Train Dataset.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combined Application/models/Run_Correct.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Upload_file2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Run_Grade" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="postgraduate" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,34 +94,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source/Correct_text" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Combined Application/models" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/Correct_text/Upload_file2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="postgraduate" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/keras-flask-deploy-webapp" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keras-flask-deploy-webapp/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combined Application/models/Run_Grade.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="split (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="postgraduate" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,12 +116,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vue/rear_end" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vue/rear_end/manage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec/split.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,7 +130,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="upload_correct_file" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="postgraduate" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,12 +138,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/source/Correct_text" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/source/Correct_text/upload_correct_file.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="view" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="postgraduate" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Combined Application/View" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combined Application/View/view.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,19 +175,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Create Train Dataset" />
-      <item itemvalue="Python.manage" />
-      <item itemvalue="Python.upload_correct_file" />
-      <item itemvalue="Python.Upload_file2" />
-      <item itemvalue="Python.app" />
+      <item itemvalue="Python.Run_Grade" />
+      <item itemvalue="Python.view" />
+      <item itemvalue="Python.split (1)" />
+      <item itemvalue="Python.Run_Correct" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
-        <item itemvalue="Python.Upload_file2" />
-        <item itemvalue="Python.manage" />
-        <item itemvalue="Python.upload_correct_file" />
-        <item itemvalue="Python.Create Train Dataset" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.view" />
+        <item itemvalue="Python.Run_Correct" />
+        <item itemvalue="Python.Run_Grade" />
+        <item itemvalue="Python.split (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +216,22 @@
       <workItem from="1585017349509" duration="6394000" />
       <workItem from="1585534195194" duration="3454000" />
       <workItem from="1585628096584" duration="8579000" />
-      <workItem from="1585705392920" duration="6339000" />
+      <workItem from="1585705392920" duration="14791000" />
+      <workItem from="1585790940720" duration="134000" />
+      <workItem from="1585795192797" duration="15168000" />
+      <workItem from="1585875833798" duration="14111000" />
+      <workItem from="1585912167256" duration="5373000" />
+      <workItem from="1585919000640" duration="1220000" />
+      <workItem from="1585980558834" duration="15201000" />
+      <workItem from="1586048139384" duration="4073000" />
+      <workItem from="1586104110848" duration="2966000" />
+      <workItem from="1586159908621" duration="10647000" />
+      <workItem from="1586187491863" duration="2859000" />
+      <workItem from="1586222242353" duration="14559000" />
+      <workItem from="1586264041980" duration="8780000" />
+      <workItem from="1586308491463" duration="14100000" />
+      <workItem from="1586343702439" duration="12184000" />
+      <workItem from="1586395347045" duration="22209000" />
     </task>
     <servers />
   </component>
@@ -244,10 +263,22 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/postgraduate$app.coverage" NAME="app Coverage Results" MODIFIED="1585709363478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/keras-flask-deploy-webapp" />
+    <SUITE FILE_PATH="coverage/postgraduate$app.coverage" NAME="app Coverage Results" MODIFIED="1586105616097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/End_flask" />
+    <SUITE FILE_PATH="coverage/postgraduate$view.coverage" NAME="view Coverage Results" MODIFIED="1586424620644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/View" />
+    <SUITE FILE_PATH="coverage/postgraduate$Run_Correct.coverage" NAME="Run_Correct Coverage Results" MODIFIED="1586424315688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models" />
+    <SUITE FILE_PATH="coverage/postgraduate$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1586416757771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
+    <SUITE FILE_PATH="coverage/postgraduate$Run_Grade.coverage" NAME="Run_Grade Coverage Results" MODIFIED="1586424294632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models" />
     <SUITE FILE_PATH="coverage/postgraduate$Create_Train_Dataset.coverage" NAME="Create Train Dataset Coverage Results" MODIFIED="1583896514140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source/Correct_text" />
-    <SUITE FILE_PATH="coverage/postgraduate$upload_correct_file.coverage" NAME="upload_correct_file Coverage Results" MODIFIED="1584367746437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source/Correct_text" />
+    <SUITE FILE_PATH="coverage/postgraduate$Doc2Vec.coverage" NAME="Doc2Vec Coverage Results" MODIFIED="1586350530016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../graduate_design_final_version/dataset" />
+    <SUITE FILE_PATH="coverage/postgraduate$Create_dataset.coverage" NAME="Create_dataset Coverage Results" MODIFIED="1586416940777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models" />
     <SUITE FILE_PATH="coverage/postgraduate$manage.coverage" NAME="manage Coverage Results" MODIFIED="1584368821933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vue/rear_end" />
+    <SUITE FILE_PATH="coverage/postgraduate$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1585877148794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application" />
+    <SUITE FILE_PATH="coverage/postgraduate$f1_accuracy.coverage" NAME="f1_accuracy Coverage Results" MODIFIED="1586356184401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source/text_grade" />
+    <SUITE FILE_PATH="coverage/postgraduate$test.coverage" NAME="test Coverage Results" MODIFIED="1586427690352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
+    <SUITE FILE_PATH="coverage/postgraduate$split.coverage" NAME="split Coverage Results" MODIFIED="1586404113433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models/Grade" />
+    <SUITE FILE_PATH="coverage/postgraduate$split__1_.coverage" NAME="split (1) Coverage Results" MODIFIED="1586417604949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Combined Application/models/Grade/Doc2vec" />
+    <SUITE FILE_PATH="coverage/postgraduate$upload_correct_file.coverage" NAME="upload_correct_file Coverage Results" MODIFIED="1584367746437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source/Correct_text" />
+    <SUITE FILE_PATH="coverage/postgraduate$Word2vec.coverage" NAME="Word2vec Coverage Results" MODIFIED="1586356425181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../transform_translate/source/data_process" />
     <SUITE FILE_PATH="coverage/postgraduate$pytest_in_Upload_file2_py.coverage" NAME="pytest in Upload_file2.py Coverage Results" MODIFIED="1584621552103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source/Correct_text" />
   </component>
 </project>
